@@ -1,6 +1,5 @@
 import { ComponentProps, ElementType } from 'react'
 import { styled } from '../styles'
-import { fontSizes } from '@ignite-ui/tokens'
 
 export const Text = styled('p', {
   fontFamily: '$default',
@@ -31,7 +30,6 @@ export const Text = styled('p', {
   },
 })
 
-export interface TextProps extends ComponentProps<'p'> {
+export interface TextProps extends ComponentProps<typeof Text> {
   as?: ElementType
-  size: keyof typeof fontSizes
 }

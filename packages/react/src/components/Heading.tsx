@@ -25,7 +25,6 @@ export const Heading = styled('h1', {
   },
 })
 
-export interface HeadingProps extends ComponentProps<'p'> {
+export interface HeadingProps extends ComponentProps<typeof Heading> {
   as?: ElementType
-  size: 'sm' | 'md' | 'lg' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl'
 }
