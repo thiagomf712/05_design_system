@@ -4,11 +4,9 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'docs/**'
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,6 +18,7 @@ jobs:
           node-version: 20
 
       - run: npm ci
+
       - run: npm run build
 
       - name: Deploy storybook
